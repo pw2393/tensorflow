@@ -66,7 +66,7 @@ const char* GetCollectiveName(const CollectiveParams* cp, bool nccl) {
       return nccl ? "NcclReduce" : "RingReduce";
 
     case GATHER_COLLECTIVE:
-      return "RingGather";
+      return nccl ? "NcclGather" : "RingGather";
 
     default:
       return "undef";

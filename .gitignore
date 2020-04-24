@@ -43,3 +43,10 @@ gradleBuild
 Podfile.lock
 Pods
 xcuserdata
+
+
+# 
+dev*
+wheel*
+venv*
+G*

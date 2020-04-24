@@ -113,6 +113,8 @@ class CollectiveGatherOpKernel : public CollectiveOpKernel {
           done);
     }
 
+    VLOG(1) << "\nLOLOLOLOLOLOLLOLOL\n";
+
     // Allocate output on the first pass through this function.  This must be
     // done immediately, while we're still in the executor thread.  Otherwise
     // the memory is not guaranteed to be unused by any concurrently executing

@@ -104,7 +104,7 @@ class NcclAllReduceOpKernel : public NcclReduceOpBase {
       OP_REQUIRES_OK_ASYNC(c, s, done);
       done();
     };
-
+    VLOG(1) << "PENG: NcclAllReduceOpKernel:ComputeAsync";
     auto* compute_stream = c->op_device_context()->stream();
     auto* gpu_info = c->device()->tensorflow_gpu_device_info();
     auto participant = absl::make_unique<NcclManager::Participant>(
